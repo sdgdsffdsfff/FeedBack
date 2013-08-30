@@ -1,0 +1,36 @@
+<?php
+
+/*
+ * Feedback [A journey always starts with the first step]
+ *
+ * @copyright Copyright (C) 2013 wine.cn All rights reserved.
+ * @license http://www.apache.org/licenses/LICENSE-2.0.txt
+ */
+
+//----------------------------------------------------------------
+
+/**
+ * 配置文件
+ * 
+ * @author   <mengfk@eswine.com>
+ * @since    1.0
+ */
+
+namespace FeedBack\Conf;
+
+class Config {
+
+    //数据库配置信息
+    static $db = array(
+        'host' => 'localhost',    
+        'user' => 'root',    
+        'dbname' => 'feedback',
+        'pass' => 'root',    
+        'port' => 3306,    
+        'charset' => 'utf8',    
+    );
+
+    //是否启用Gzip压缩
+    static $gzip = true;
+
+}
