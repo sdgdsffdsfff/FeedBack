@@ -1,6 +1,6 @@
 背景：
 
-目前逸香各个项目用户反馈信息比较分散，基本上每个应用都单独存储，这样不利于统一管理查看，鉴于此Feedback项目产生。
+各个项目用户反馈信息比较分散，基本上每个应用都单独存储，这样不利于统一管理查看，鉴于此Feedback项目产生。
 
 满足需求：
 
@@ -10,7 +10,7 @@
 
 主要实现：
 
-1.发送反馈信息接口 URL/index.php?act=sendFeedBack
+1.客户端发送反馈信息接口 URL/index.php?act=sendFeedBack
 提交方式：POST
 提交参数：type={$type}&appid={$appid}&content={$content}&mid={$mid}&uuid={$uuid}&contact={$contact}&token={$token}&rand={$rand}
 参数说明：type:    反馈类型,1 - 建议, 2 - 投诉
@@ -24,7 +24,7 @@
 返回格式：JSON
 返回信息：{"status":1, "message":"succeed"}
 
-2.查看反馈信息接口 URL/index.php?act=getFeedBack
+2.提取反馈信息接口 URL/index.php?act=getFeedBack
 提交信息：POST
 提交参数：page={$page}&limit={$limit}&type={$type}&appid={$app}&token={$token}&rand={$rand}
 参数说明：type:    反馈类型,1 - 建议, 2 - 投诉
@@ -55,4 +55,4 @@ token生成规则：
         asort($arr);
         $token = sha1(implode('', $arr));
 
-更新日期:201.08.30
+更新日期:2013.08.30
